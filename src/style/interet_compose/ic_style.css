@@ -1,0 +1,105 @@
+.main{
+    width: 100%;
+}
+
+
+.formulaire_bourse{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.field{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.div_input{
+    position: relative;
+}
+
+.field label{
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.field input{
+    width: 75%;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+
+.signe{
+    position: absolute;
+    background-color: rgb(0, 0, 120);
+    color: white;
+    height: 30px;
+    width: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.calcul_button{
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s;
+    background-color: white;
+    cursor: pointer;
+}
+.calcul_button:hover{
+    background-color: rgb(242, 251, 255);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0);
+    color: rgba(0, 0, 0);
+}
+
+table{
+    width: 100%;
+}
+table th{
+    text-align: start;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+table td{
+   width: 33.33%;
+}
+table tr{
+    transition: all 0.3s;
+ }
+.chiffre{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bad_input{
+    border: 2px solid red !important;
+}
+
+.mouse_over{
+    font-size: 17px;
+    color: red;
+}
+
+.end{
+    text-align: end;
+}
+.center{
+    text-align: center;
+}
+
+.error_message p{
+    display: none;
+}
