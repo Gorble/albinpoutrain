@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/gorble/static/css/main.8dc5425b.css",
-    "main.js": "/gorble/static/js/main.59d5cf41.js",
-    "static/media/logo.png": "/gorble/static/media/logo.6eca23231fd85ddeb900.png",
-    "index.html": "/gorble/index.html",
-    "main.8dc5425b.css.map": "/gorble/static/css/main.8dc5425b.css.map",
-    "main.59d5cf41.js.map": "/gorble/static/js/main.59d5cf41.js.map"
+    "main.css": "/accueil/static/css/main.8dc5425b.css",
+    "main.js": "/accueil/static/js/main.e6bca9c7.js",
+    "static/media/logo.png": "/accueil/static/media/logo.6eca23231fd85ddeb900.png",
+    "index.html": "/accueil/index.html",
+    "main.8dc5425b.css.map": "/accueil/static/css/main.8dc5425b.css.map",
+    "main.e6bca9c7.js.map": "/accueil/static/js/main.e6bca9c7.js.map"
   },
   "entrypoints": [
     "static/css/main.8dc5425b.css",
-    "static/js/main.59d5cf41.js"
+    "static/js/main.e6bca9c7.js"
   ]
 }
