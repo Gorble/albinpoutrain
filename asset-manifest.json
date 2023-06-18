@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gorble/static/css/main.8dc5425b.css",
-    "main.js": "/gorble/static/js/main.f67b7f77.js",
+    "main.js": "/gorble/static/js/main.59d5cf41.js",
     "static/media/logo.png": "/gorble/static/media/logo.6eca23231fd85ddeb900.png",
     "index.html": "/gorble/index.html",
     "main.8dc5425b.css.map": "/gorble/static/css/main.8dc5425b.css.map",
-    "main.f67b7f77.js.map": "/gorble/static/js/main.f67b7f77.js.map"
+    "main.59d5cf41.js.map": "/gorble/static/js/main.59d5cf41.js.map"
   },
   "entrypoints": [
     "static/css/main.8dc5425b.css",
-    "static/js/main.f67b7f77.js"
+    "static/js/main.59d5cf41.js"
   ]
 }
