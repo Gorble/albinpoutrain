@@ -6,7 +6,7 @@
 .formulaire_bourse{
     display: flex;
     flex-wrap: wrap;
-    margin: 10px 0;
+    margin: 40px 0;
 }
 
 .field{
@@ -35,6 +35,11 @@
     border-bottom-right-radius: 0px;
 }
 
+/*.ic_input{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+*/
 
 
 .signe{
@@ -102,4 +107,12 @@ table tr{
 
 .error_message p{
     display: none;
+}
+
+@media screen and (max-width: 600px){
+    .formulaire_bourse{
+        flex-direction: column;
+        align-content: center;
+    }
+    
 }

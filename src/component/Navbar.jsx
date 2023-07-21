@@ -4,7 +4,7 @@ import bourse_ico from "../imgs/bourse.png"
 import programme_ico from "../imgs/programme.png"
 import about_ico from "../imgs/about.png"
 import "../style/component/navbar.css"
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 function Navbar() {
 
@@ -17,8 +17,11 @@ function Navbar() {
     })
   }
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
+    /*const linkTimout = setTimeout(activePage, 500)*/
     activePage()
+    /*return ()=> clearTimeout(linkTimout)*/
+    
   }, [])
 
   const active = function(e){
@@ -31,10 +34,10 @@ function Navbar() {
   return (
     <nav  className='navbar'>
       <ul>
-        <li><Link to="/"  onClick={active}><img src={accueil_ico} alt="logo de l'accueil" data-to="/" /></Link></li>
-        <li><Link to="/bourse" onClick={active}><img src={bourse_ico} alt="" data-to="/bourse" /></Link></li>
-        <li><Link to="/programme" onClick={active}><img src={programme_ico} alt="" data-to="/programme" /></Link></li>
-        <li><Link to="/about"  onClick={active}><img src={about_ico} alt="" data-to="/about" /></Link></li>
+        <li><Link to="/gorble/"  onClick={active}><img src={accueil_ico} alt="logo de l'accueil" data-to="/gorble/" /></Link></li>
+        <li><Link to="/gorble/bourse" onClick={active}><img src={bourse_ico} alt="" data-to="/gorble/bourse" /></Link></li>
+        <li><Link to="/gorble/programme" onClick={active}><img src={programme_ico} alt="" data-to="/gorble/programme" /></Link></li>
+        <li><Link to="/gorble/about"  onClick={active}><img src={about_ico} alt="" data-to="/gorble/about" /></Link></li>
       </ul>
     </nav>
   );

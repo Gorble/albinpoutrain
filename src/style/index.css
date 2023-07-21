@@ -7,6 +7,14 @@
   --bgcolor: rgb(240, 243, 248);
 }
 
+h1{
+  font-size: 1.5rem;
+}
+
+p, label, button{
+  font-size: 1rem;
+}
+
 body{
   background-color: var(--bgcolor);
 }
@@ -33,6 +41,15 @@ body{
 }
 
 @media screen and (max-width: 600px){
+
+  h1{
+    font-size: 1rem;
+  }
+
+  p, label, button{
+    font-size: 0.75rem;
+  }
+
   .header{
     top: auto;
     right: 0;

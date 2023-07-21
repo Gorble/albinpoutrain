@@ -81,7 +81,7 @@ export function Formulaire({getStateValues}){
     }
 
     return <div className="bloc bourse">
-        <h2>Calcul boursier simple, intérêt composé</h2>
+        <h1>Calcul boursier simple, intérêt composé</h1>
         <div className="formulaire_bourse">
             <GetValueContext.Provider value={getValueContext}>
                 <Field id="initial" reference={initialRef} signe={"€"}>Investissement initial</Field>

@@ -1,0 +1,4 @@
+.program_field{
+    display: flex;
+    flex-direction: column;
+}

@@ -52,10 +52,10 @@ const App = () =>{
         </header>
         <main className="main" ref={main}>
           <Routes>
-            <Route path="/" element={<Accueil/>} />
-            <Route path="/bourse" element={<Interet_compose/>} />
-            <Route path="/programme" element={<Programme/>} />
-            <Route path="/about" element={<About/>} />
+            <Route path="/gorble/" element={<Accueil/>} />
+            <Route path="/gorble/bourse" element={<Interet_compose/>} />
+            <Route path="/gorble/programme" element={<Programme/>} />
+            <Route path="/gorble/about" element={<About/>} />
             <Route path="*" element={<NotFound/>} />
           </Routes>
         </main>
