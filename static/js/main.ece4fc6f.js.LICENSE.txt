@@ -1,3 +1,10 @@
+/*!isNaN(ageRef.current.value) ? setInfo(prevInfo => ({
+                ...prevInfo, 
+                generale: {
+                    age: parseInt(ageRef.current.value)
+                }
+            })) : canSend = false*/
+
 /**
  * @license React
  * react-dom.production.min.js
