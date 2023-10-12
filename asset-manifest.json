@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/gorble/static/css/main.38c29fe5.css",
-    "main.js": "/gorble/static/js/main.ece4fc6f.js",
+    "main.css": "/gorble/static/css/main.29f5b985.css",
+    "main.js": "/gorble/static/js/main.5f81ebbb.js",
+    "static/media/clavicule.jpg": "/gorble/static/media/clavicule.f8d3c50bfce79499806c.jpg",
+    "static/media/ligne.JPG": "/gorble/static/media/ligne.53e57ac6aabc54f7182e.JPG",
+    "static/media/hanche.JPG": "/gorble/static/media/hanche.a21675510b25c1cdb860.JPG",
+    "static/media/cage.JPG": "/gorble/static/media/cage.b31640edbdba4180185b.JPG",
     "static/media/logo.png": "/gorble/static/media/logo.6eca23231fd85ddeb900.png",
     "index.html": "/gorble/index.html",
-    "main.38c29fe5.css.map": "/gorble/static/css/main.38c29fe5.css.map",
-    "main.ece4fc6f.js.map": "/gorble/static/js/main.ece4fc6f.js.map"
+    "main.29f5b985.css.map": "/gorble/static/css/main.29f5b985.css.map",
+    "main.5f81ebbb.js.map": "/gorble/static/js/main.5f81ebbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.38c29fe5.css",
-    "static/js/main.ece4fc6f.js"
+    "static/css/main.29f5b985.css",
+    "static/js/main.5f81ebbb.js"
   ]
 }
