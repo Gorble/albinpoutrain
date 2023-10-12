@@ -6,11 +6,9 @@ export function Field({id, reference, signe, children}){
     const {state, getValue} = useContext(GetValueContext)
 
 
-    return <div className="field">
+    return <div className="field field_ic">
         <label htmlFor={id}>{children} </label>
-        <div className="div_input">
-            <input type="text" id={id} value={state[id]} onChange={getValue} ref={reference}/>
-            <span className="signe">{signe}</span>
-        </div>
+        <input type="text" id={id} value={state[id]} onChange={getValue} ref={reference}/>
+        <span className="signe">{signe}</span>
     </div>
 }

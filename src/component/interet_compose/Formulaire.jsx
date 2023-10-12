@@ -1,5 +1,5 @@
 import { Field } from "./Field";
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { GetValueContext } from "./context";
 
 
@@ -13,16 +13,13 @@ export function Formulaire({getStateValues}){
         compose: "4"
     })
 
-    const [err, setError] = useState([])
-
     const initialRef = useRef()
     const regulierRef = useRef()
     const interetRef = useRef()
     const dureeRef = useRef()
-    const year = useRef()
-    const letter = useRef()
 
-    const getValue = (e) =>{
+
+    const getValue = useCallback((e) =>{
         const elmt = e.target
         setState(prevState => (
                 {
@@ -31,33 +28,36 @@ export function Formulaire({getStateValues}){
                 }
             )
         )
-    }
+    }, [])
 
 
-    const makeValue = (elem, values, control, type=1) =>{
+    const makeValue = useCallback((elem, values, control, type=1) =>{
 
         if((state[elem.id]===state.duree) && state.duree > 1000){
-            year.current.style.display = "block";
             elem.classList.add("bad_input")
             control[0] = false
+            return
+        }else if((state[elem.id]===state.duree) && state.duree <= 1000){
+            elem.classList.remove("bad_input")
         }
 
 
         if(isNaN(state[elem.id]) || state[elem.id].length === 0){
             elem.classList.add("bad_input")
+            console.log(elem)
             control[0] = false     
         }else{
             type === 1 ? 
-            values[elem.id] = parseFloat(state[elem.id])
-            :
-            values[elem.id] = parseInt(state[elem.id])
+                values[elem.id] = parseFloat(state[elem.id])
+                :
+                values[elem.id] = parseInt(state[elem.id])
 
             elem.classList.remove("bad_input")
         }     
                 
-    }
+    }, [state])
 
-    const controlValue = () =>{
+    const controlValue = useCallback(() =>{
         let control = [true]
         let values = {
             initial: "",
@@ -73,7 +73,8 @@ export function Formulaire({getStateValues}){
         makeValue(dureeRef.current, values, control, 2)
 
         if(control[0]) getStateValues(values)
-    }
+    }, [state])
+
 
     const getValueContext = {
         state,
@@ -91,9 +92,6 @@ export function Formulaire({getStateValues}){
             </GetValueContext.Provider>
         </div>
         <button onClick={controlValue} className="calcul_button">Calculer</button>
-        <div className="error_message">
-            <p ref={year}>Pas plus de 1000 ans. Déjà après 100 ans il ne reste plus que des os...</p>
-            <p ref={letter}>Je suis nul en math, je ne calcul pas encore avec des lettres...</p>
-        </div>
+        
     </div>
 }

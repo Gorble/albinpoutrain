@@ -1,0 +1,34 @@
+[
+    {
+
+      "ligne" : {
+        "long" : "Les longilignes ont de longs bras et longues jambes et généralement un buste court.",
+        "brev" : "Les brevilignes ont de cours bras et de courtes jambes et généralement un buste plus long."
+      }
+    },
+    {
+      "epaule": {
+        "etroit" : "Avoir des épaules étroite favorise le travail des pectoraux.",
+        "large" : "Avoir des épaules large favorise le travail des épaules."
+      }
+    },
+    {
+        "cage" : {
+            "plat" : "Le désavantage d'avoir une cage thoracique plate est un mauvais positionnement mécanique des pectoraux sur certains mouvement comme le développé couché ou pire, incliné. Il est toujours possible de les faire mais ce n'est pas forcément optimal.",
+            "epais" : "Avoir une cage épaisse favorise le travail des pectoraux."
+        }
+    },
+    {
+        "valgus" : {
+            "non" : "Ne pas avoir de valgus vous peremt d'exécuter n'importe quel type d'exercice en supination sans mettre en danger vos poignets.",
+            "moyen" : "Avec un valgus moyen, il vaut mieux éviter d'utiliser des barres droites en prise supinatuion, quel que soit l'exercice surtout si vous ressentez une gêne voire des douleurs aux poignets.",
+            "fort" : "N'utiliser pas de barre droites lors de vos exercices en prise supination, quel que soit l'exercice. Cela risquerai de vous causer des blesures au poignet."
+        }
+    },
+    {
+        "hanche" : {
+            "etroite" : "Des hanches étroites réduit votre stabilité, stabilité directement lié à votre gainage.",
+            "large" : "Des hanches large vous permet d'être plus stable sur la plupart des exercices de jambes, donc plus fort et vous réduisez le risque de vous blesser de part un meilleur gainage."
+        }
+    }
+]

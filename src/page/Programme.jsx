@@ -1,40 +1,60 @@
 import { Resultat } from "../component/programme/Resultat"
 import { InfoGenerale } from "../component/programme/InfoGenerale"
-import { InfoMorpho } from "../component/programme/InfoMorpho"
 import { useState } from "react"
-import { GetInfoContext } from "../component/programme/context"
 import "../style/programme/programme.css"
 
 function Programme(){
-
-  const Pages = [<InfoGenerale/>, <InfoMorpho/>, <Resultat/>]
 
   const [page, setPage] = useState(0)
 
   const [info, setInfo] = useState({
     generale: {
-      age: 18,
+      age: null,
       taille: null,
       poids: null,
+      sexe: null,
+      objectif: null,
+      activity: null,
+      training: null,
+      ligne: null,
+      cage: null,
+      epaule: null,
+      hanche: null
+    },
+    conseils: {
+      cage: null,
+      ligne: null,
+      epaule: null,
+      hanche: null,
+      pec: null,
+      delto: null,
+      dorsaux: null,
+      trapeze: null,
+      biceps: null,
+      triceps: null,
+      chaineAnterieur: null,
+      chainePosterieur: null,
+      program: null
+    },
+    exercices: {
+      pec: [],
+      dos: [],
+      jambe: [],
+      mollets: []
     }
   })
 
-  const infos = {
-    info,
-    setInfo,
-    setPage
-  }
-
-
-  return <>
-      <GetInfoContext.Provider value={infos}>
-        {Pages[page]}
-      </GetInfoContext.Provider>
   
-      {/*state < 2 ? <button onClick={nextPage}>Envoyer</button> : ""*/}
-      {info.generale.age}
 
-    </>
+  return page === 0 ? 
+
+    <InfoGenerale setInfo={setInfo} setPage={setPage} />
+
+     :
+    
+    <Resultat info={info}/>
+
+    
 
 }
   

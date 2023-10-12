@@ -9,51 +9,10 @@
     margin: 40px 0;
 }
 
-.field{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+.field_ic{
+    width: 48%;
 }
 
-.div_input{
-    position: relative;
-}
-
-.field label{
-    color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-}
-.field input{
-    width: 75%;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding-left: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-/*.ic_input{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-*/
-
-
-.signe{
-    position: absolute;
-    background-color: rgb(0, 0, 120);
-    color: white;
-    height: 30px;
-    width: 30px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 12px;
-}
 
 .calcul_button{
     padding: 5px 15px;
@@ -87,10 +46,6 @@ table tr{
  }
 .chiffre{
     font-family: 'Courier New', Courier, monospace;
-}
-
-.bad_input{
-    border: 2px solid red !important;
 }
 
 .mouse_over{

@@ -1,0 +1,37 @@
+[
+    {
+      "day": 1,
+      "id": 1,
+      "program": "Un seul jour d'entrainement n'est pas suffisant pour avoir un travail efficace est complet. On a ici un fullbody composé de 3 exercices, si vous vous y donnez à fond, vous ne pourrez pas en faire davantage. Le mieux serai de faire 2 séances différentes afin d'avoir au moins une seconde sélection d'exercice pour avoir un travail plus complet et alterner une séance sur deux ou bien faire un cycle de au moins un mois par séance et atlerner les séances par cycle. Vous n'auriez pas à vous soucier de ce genre de choses avec 2 séances par semaines. Vous constaterez que que chaque exercices vous avez 3 séries de 6 à 8 reps puis 2 séries de 10 à 15 reps, cela permet un travail musculaire plus complet mais aussi de compenser un peu le manque de volume (quantité de travail) dans la semaine. Prenez au moins 3 minutes de repos entre chaque séries, l'objectif étant de récupérer assez pour réussir ses séries. Réussir ses séries correspond à atteindre le nombre de rep prévu, par exemple sur une série de 6 à 8 rep, on veut minimum 6 reps et maximum 8 reps. On ne monte pas la charge tant qu'on ne peut pas faire 8 reps sur chacune de ses séries avec une même charge."
+    },
+    {
+      "day": 2,
+      "id": 2,
+      "program": "Deux jours d'entrainement peuvent être suffisant pour avoir un travail musculaire plus complet. Le volume d'entrainement (quantité de travail) est relativement suffisant. 3 séances seraient plus intéressantes cependant."
+    },
+    {
+      "day": 3,
+      "id": 3,
+      "program": "Vous alternerez ces 2 sérances ci-dessus. Il peut être très intéressant de varier le nombre de rep. Ici on est sur du 6-8 rep par séries, mais je vous conseille, lors de votre troisième séance dans la semaine, de travailler sur des séries allant de 10 à 15 répétitions pour un travail plus complet."
+    },
+    {
+      "day": 4,
+      "id": 4,
+      "program": "Largement suffisant pour un travail complet de tout les muscles tout en ayant assez de temps pour récupérer."
+    },
+    {
+      "day": 5,
+      "id": 5,
+      "program": "Avec 5 jours vous pouvez travailler tous les muscles de façon suffisante. Cela devient limité en terme de jours de récupérations, ces derniers étant très important pour la récupérations msuculaire mais également articulaire et nerveuse. Ces deux derniers mettent beaucoup plus de temps pour récupérer. Faites attention à votre alimentation et à votre sommeil."
+    },
+    {
+      "day": 6,
+      "id": 6,
+      "program": "6 jours d'entrainements sont, selon moi, la limite en étant naturel. Le corps a besoin de récupérer et même si vos muscles on relativement suffisamment de temps de récupérations entre les séances, le systeme nerveux et vos artucialtion beaucoup moins d'autant plus si vous vous donnez à fond sur chaque exercice."
+    },
+    {
+      "repos": "Prenez 3 à 5 minutes de repos entre chaque séries. Cela permet au muscle de bien récupérer et donc de pouvoir le re travailler avec l'intensité la plus élevé possible à la série suivante. Ce qui est limité avec moins de temps de repos.",
+      "conseilsG": "Il est extrêmement important de bien s'échauffer. Commencez par du cardio en intensité légère afin d'accélérer le rythme cardiaque. Ensuite, échauffez vos articulations, l'idéal est de tout échauffer, poignet, coude, épaule, nuque, hanche, genoux etc... Echauffez les muscles qui vont entrer en jeu sur la séance avec des exercie en isolation, charge très légère et série longue (20 rep). A chaque début d'éxercice, commencez par au moins 2 séries d'échauffement dessus. Par exemple, si vos séries de travail sont à 100kg au développé couché, faite une série barre à vide (sans poids) en série longue, puis au moins une autre à 60kg sur une dizaine de reps. L'idéral est d'en avoir une troisème à 80/90kg sur 3-5 rep pour avoir un échauffement complet et préparer son corps à soulever plus lourd. Avant d'entamer une progression, apprendez à bien exécuter les mouvements, c'est impératif pour se protéger des blessures mais aussi pour apprendre à bien recruter les muscles voulus."
+    }
+
+]
