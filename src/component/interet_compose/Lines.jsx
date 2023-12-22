@@ -1,6 +1,4 @@
-const formatNumberWithSpaces = (number) =>{
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
+import { formatNumberWithSpaces } from "../../function/formatNumerWithSpaces"
 
 const flyOverMoney = (e) =>{
     e.currentTarget.classList.add("mouse_over")
@@ -12,7 +10,7 @@ const flyOutMoney = (e) =>{
 
 export function Lines({tab, last, pocket}){
 
-    return <table>
+    return <table className="ic_table">
         <thead>
             <tr>
                 <th colSpan={3}>Au bout de {tab.length} ans vous disposerez de: <span className="chiffre">{formatNumberWithSpaces(last.toFixed(2))}€</span></th>

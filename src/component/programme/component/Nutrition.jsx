@@ -34,9 +34,10 @@ export function Nutrition({info, setGridSize}){
     ];
 
     const divSize = () => {
-        const gridSize = title.current.clientHeight + 
-                        table.current.clientHeight +
-                        about.current.clientHeight + 
+
+        const gridSize = title.current.offsetHeight + 
+                        table.current.offsetHeight +
+                        about.current.offsetHeight + 
                         70
 
         setGridSize(gridSize)

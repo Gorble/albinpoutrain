@@ -18,7 +18,7 @@ const controlField = function(ref, canSend){
 
 
 
-export function InfoGenerale ({setInfo, setPage}){
+export default function InfoGenerale ({setInfo, setPage}){
 
 
     const [sexeState, setSexeState] = useState("h")
@@ -64,7 +64,7 @@ export function InfoGenerale ({setInfo, setPage}){
             }))
 
 
-            setPage(page => page+1) 
+            setPage("resultat") 
 
         }
 

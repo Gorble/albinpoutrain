@@ -1,6 +1,6 @@
 
 
-const Accueil = () =>{
+function Accueil(){
   return <div className="bloc">
     <h1>Accueil</h1>
     <p>Ce site héberge une section permettant de faire un calcul d'intérêt composé,

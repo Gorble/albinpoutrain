@@ -1,4 +1,5 @@
 export function Cinq({info}){
+    console.log(info)
     return <>
         <div className="day">
     
@@ -45,7 +46,7 @@ export function Cinq({info}){
                     <td>3 séries de 6 à 8 répétitions</td>
                 </tr>
                 <tr>
-                    <th>{info.exercices.exercices.dos[2]}</th>
+                    <th>{info.exercices.dos[2]}</th>
                     <td>3 séries de 10 à 15 répétitions</td>
                 </tr>
                 <tr>

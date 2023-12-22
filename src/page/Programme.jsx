@@ -1,11 +1,11 @@
 import { Resultat } from "../component/programme/Resultat"
 import { InfoGenerale } from "../component/programme/InfoGenerale"
-import { useState } from "react"
+import { Suspense, lazy, useState } from "react"
 import "../style/programme/programme.css"
 
 function Programme(){
 
-  const [page, setPage] = useState(0)
+  const [page, setPage] = useState("info")
 
   const [info, setInfo] = useState({
     generale: {
@@ -44,16 +44,21 @@ function Programme(){
     }
   })
 
+
+  if(page === "info"){
+    const InfoGeneraleLazy = lazy(() => import("../component/programme/InfoGenerale"))
+    return <Suspense>
+      <InfoGeneraleLazy setInfo={setInfo} setPage={setPage}></InfoGeneraleLazy>
+    </Suspense>
+  }
+  if(page === "resultat"){
+    const ResultatLasy = lazy(()=> import("../component/programme/Resultat"))
+    return <Suspense>
+          <ResultatLasy info={info}/>
+    </Suspense>
+  }
+
   
-
-  return page === 0 ? 
-
-    <InfoGenerale setInfo={setInfo} setPage={setPage} />
-
-     :
-    
-    <Resultat info={info}/>
-
     
 
 }

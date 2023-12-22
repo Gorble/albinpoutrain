@@ -237,15 +237,15 @@
     justify-content: center;
 }
 
-.day table th{
+.day th{
     font-size: 16px;
 }
-.day table td{
+.day td{
 
     font-size: 14px;
 }
 
-.day table th, td{
+.day th, .day td{
     padding: 20px 0;
 }
 

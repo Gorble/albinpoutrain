@@ -1,16 +1,14 @@
-.main{
-    width: 100%;
-}
-
 
 .formulaire_bourse{
     display: flex;
     flex-wrap: wrap;
     margin: 40px 0;
+    justify-content: space-around;
 }
 
 .field_ic{
     width: 48%;
+    margin-bottom: 10px;
 }
 
 
@@ -30,18 +28,27 @@
     color: rgba(0, 0, 0);
 }
 
-table{
+.ic_table{
     width: 100%;
 }
-table th{
+.ic_table th{
     text-align: start;
     padding-bottom: 10px;
     font-size: 15px;
 }
-table td{
+
+.ic_table th:nth-child(2){
+    text-align: center;
+}
+.ic_table th:nth-child(3){
+    text-align:end;
+}
+
+
+.ic_table td{
    width: 33.33%;
 }
-table tr{
+.ic_table tr{
     transition: all 0.3s;
  }
 .chiffre{
@@ -63,6 +70,8 @@ table tr{
 .error_message p{
     display: none;
 }
+
+
 
 @media screen and (max-width: 600px){
     .formulaire_bourse{

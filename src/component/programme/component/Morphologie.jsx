@@ -1,12 +1,6 @@
 import { Radio } from "./form/Radio"
+import { initialeEnMajuscule } from "../../../function/initialeEnMajuscule"
 
-function initialeEnMajuscule(chaine) {
-    if (chaine.length === 0) {
-        return chaine; 
-    }
-
-    return chaine.charAt(0).toUpperCase() + chaine.slice(1);
-}
 
 export function Morphologie ({infos, state, onCheck, onClickHelp, children}){
     return <div className="morphologie_bloc">

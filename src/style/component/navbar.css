@@ -1,5 +1,6 @@
 .navbar{
     margin: auto;
+    z-index: 1;
 }
 
 .navbar ul{
@@ -9,6 +10,7 @@
 
 .navbar li{
     margin: 30px 15px;
+    position: relative;
 }
 
 
@@ -22,6 +24,16 @@
     opacity: 1!important;
 }
 
+.link_name{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: white;
+}
+
 @media screen and (max-width: 600px){
     .navbar ul{
         display: flex;
@@ -31,4 +43,4 @@
         margin: 10px 15px;
     }
     
-  }
+}

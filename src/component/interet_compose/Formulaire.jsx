@@ -86,7 +86,7 @@ export function Formulaire({getStateValues}){
         <div className="formulaire_bourse">
             <GetValueContext.Provider value={getValueContext}>
                 <Field id="initial" reference={initialRef} signe={"€"}>Investissement initial</Field>
-                <Field id="regulier" reference={regulierRef} signe={"€"}>Investissement régulier</Field>
+                <Field id="regulier" reference={regulierRef} signe={"€"}>Investissement par ans</Field>
                 <Field id="interet" reference={interetRef} signe={"%"}>Taux d'intéret</Field>
                 <Field id="duree" reference={dureeRef} signe={"an(s)"}>Durée d'investissement</Field>
             </GetValueContext.Provider>

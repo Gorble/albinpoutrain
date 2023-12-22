@@ -4,7 +4,7 @@ import { Explication } from "./component/Explication";
 import { Nutrition } from "./component/Nutrition";
 
 
-export function Resultat ({info}){
+export default function Resultat ({info}){
 
     const [exerciceSize, setGridSize] = useState("auto")
 
