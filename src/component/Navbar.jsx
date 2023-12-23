@@ -19,6 +19,7 @@ function Navbar() {
 
   const mouseFlyOver = (e) =>{
     const div = e.currentTarget.querySelector("div")
+    div.style.display = "block"
     div.style.top = (e.currentTarget.offsetHeight-div.offsetHeight)/2 + "px"
     div.style.right = -(e.currentTarget.offsetWidth+div.offsetWidth) + "px"
     div.style.opacity = 1
@@ -27,6 +28,10 @@ function Navbar() {
   const mouseFlyOut = (e) =>{
     const div = e.currentTarget.querySelector("div")
     div.style.opacity = 0
+    setTimeout(()=>{
+      div.style.display = "none"
+    },300)
+    
   }
 
   return (

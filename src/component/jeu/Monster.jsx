@@ -6,12 +6,12 @@ import prairie from "./img/prairie.png"
 
 export function Monster({isPlaying, pause, count, monsterRef, darknessRef}){
 
-    const{monster} = useContext(MonsterContext)
+    const{monster, setWidth, setHeight} = useContext(MonsterContext)
     const{player, decreasePlayerHp} = useContext(PlayerContext)
 
-    const [width, setWidth] = useState(10)
-    const [height, setHeight] = useState(10)
+
     const [fire, setFire] = useState(80)
+
 
     useEffect(()=>{
         let attackPlayer = null
@@ -33,7 +33,7 @@ export function Monster({isPlaying, pause, count, monsterRef, darknessRef}){
     const value = (count/200) < 0.9 ? (count/200) : 0.9
 
     useEffect(()=>{
-        count %2 === 0 ? setHeight(height+0.5) : setWidth(width+0.5)
+        count %2 === 0 ? setHeight(monster.height+0.5) : setWidth(monster.width+0.5)
         if(value >= 0.9){
             setFire(fire-0.2)
         }
@@ -53,8 +53,8 @@ export function Monster({isPlaying, pause, count, monsterRef, darknessRef}){
 
         <div className="monster_skin"
             style={{
-                width: `${width}px`,
-                height: `${height}px`
+                width: `${monster.width}px`,
+                height: `${monster.height}px`
             }}
             ref={monsterRef}
         ></div>

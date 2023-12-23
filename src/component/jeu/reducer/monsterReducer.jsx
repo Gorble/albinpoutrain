@@ -106,8 +106,24 @@ function monsterReducer(state, action){
         return action.payload
     }
 
+    if(action.type==="SET_WIDTH"){
+        return {
+            ...state,
+            width: action.payload
+        }
+    }
+
+    if(action.type==="SET_HEIGHT"){
+
+        return {
+            ...state,
+            height: action.payload
+        }
+    }
+
     return state
-}
+    
+}//fin du reducer
 
 export function useMonster(etat){
     const [state, dispatch] = useReducer(monsterReducer, etat)
@@ -117,6 +133,8 @@ export function useMonster(etat){
         initMonsterHp: useCallback(() => dispatch({type: "INIT_HP"}), []),
         decreaseMonsterHp: useCallback((dmg)=> dispatch({type: "DECREASE_HP", payload: dmg}), []),
         upgradeMonster: useCallback((count) => dispatch({type: "UPGRADE_MONSTER", payload: count}), []),
-        setMonster: useCallback((monster) => dispatch({type: "SET_MONSTER", payload: monster}))   
+        setMonster: useCallback((monster) => dispatch({type: "SET_MONSTER", payload: monster})),   
+        setWidth: useCallback((value) => dispatch({type: "SET_WIDTH", payload: value})),
+        setHeight: useCallback((value) => dispatch({type: "SET_HEIGHT", payload: value}))
     }
 }

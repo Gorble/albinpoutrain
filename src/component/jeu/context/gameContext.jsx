@@ -5,7 +5,9 @@ export const MonsterContext = createContext({
     initHp: () => {},
     decreaseMonsterHp: () =>{},
     upgradeMonster: () => {},
-    setMonster: () => {}
+    setMonster: () => {},
+    setWidth: () => {},
+    setHeight: () => {}
 })
 
 export const PlayerContext = createContext({

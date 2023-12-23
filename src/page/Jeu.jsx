@@ -44,6 +44,8 @@ const MONSTER = {
     missChance: 0.01,
     attackSpeed: 1500,
     money: 1,
+    width: 10,
+    height: 10
 }
 
 const callTheBoss = (setPause, monsterRef, setMonster, initPlayerHp) =>{
@@ -102,11 +104,21 @@ const maggotWillEatTheBoss = (setPause, monsterRef, darknessRef,)=>{
 
 export function Jeu({main, header}){
 
-    const [isPlaying, setIsPlaying] = useState(true)
+    const [isPlaying, setIsPlaying] = useState(false)
     const [pause, setPause] = useState(false)
     const [bossCall, setBossCall] = useState(false)
     const [restart, setRestart] = useState(0)
     const [count, setCount] = useState(0)
+    /*const [monsterWidth, setMonsterWidth] = useState(10)
+    const [monsterHeight, setMonsterHeight] = useState(10)
+
+    const monsterSize = {
+        width: monsterWidth,
+        setWidth: setMonsterWidth,
+
+        height: monsterHeight,
+        setWidth: setMonsterHeight,
+    }*/
 
     const monsterRef = useRef()
     const darknessRef = useRef()
@@ -117,7 +129,7 @@ export function Jeu({main, header}){
         increaseMissChance, increaseAttackSpeed, setPlayer} = usePlayer(PLAYER)
 
 
-    const {monster, decreaseMonsterHp, initMonsterHp, upgradeMonster, setMonster} = useMonster(MONSTER)
+    const {monster, decreaseMonsterHp, initMonsterHp, upgradeMonster, setMonster, setHeight, setWidth} = useMonster(MONSTER)
 
     const playerContext = {
         player,
@@ -134,7 +146,9 @@ export function Jeu({main, header}){
     }
     const monsterContext = {
         monster,
-        decreaseMonsterHp
+        decreaseMonsterHp,
+        setWidth,
+        setHeight
     }
 
     const onResize = () =>{
@@ -213,6 +227,7 @@ export function Jeu({main, header}){
         setRestart(restart+1)
         setIsPlaying(true)
         setPause(false)
+        monsterRef.current.querySelector("img")?.remove()
     }
 
     return <>
