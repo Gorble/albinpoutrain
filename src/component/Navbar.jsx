@@ -38,36 +38,36 @@ function Navbar() {
     <nav  className='navbar'>
       <ul>
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/gorble/"  >
-            <img src={accueil_ico} alt="logo de l'accueil" data-to="/gorble/" onClick={handleClick} className={active === "/gorble/" ? "active" : ""}/>
+          <Link to="/albinpoutrain/"  >
+            <img src={accueil_ico} alt="logo de l'accueil" data-to="/albinpoutrain/" onClick={handleClick} className={active === "/gorble/" ? "active" : ""}/>
           </Link>
           <LinkName>Accueil</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/gorble/bourse" >
-            <img src={bourse_ico} alt="" data-to="/gorble/bourse" onClick={handleClick} className={active === "/gorble/bourse" ? "active" : ""}/>
+          <Link to="/albinpoutrain/bourse" >
+            <img src={bourse_ico} alt="" data-to="/albinpoutrain/bourse" onClick={handleClick} className={active === "/gorble/bourse" ? "active" : ""}/>
           </Link>
           <LinkName>Calcul boursier</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/gorble/programme" >
-            <img src={programme_ico} alt="" data-to="/gorble/programme" onClick={handleClick} className={active === "/gorble/programme" ? "active" : ""}/>
+          <Link to="/albinpoutrain/programme" >
+            <img src={programme_ico} alt="" data-to="/albinpoutrain/programme" onClick={handleClick} className={active === "/gorble/programme" ? "active" : ""}/>
           </Link>
           <LinkName>Générateur de programme sportif</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/gorble/jeu" >
-            <img src={jeu_ico} alt="" data-to="/gorble/jeu" onClick={handleClick} className={active === "/gorble/jeu" ? "active" : ""}/>
+          <Link to="/albinpoutrain/jeu" >
+            <img src={jeu_ico} alt="" data-to="/albinpoutrain/jeu" onClick={handleClick} className={active === "/gorble/jeu" ? "active" : ""}/>
           </Link>
           <LinkName>Jeu</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/gorble/about"  >
-            <img src={about_ico} alt="" data-to="/gorble/about" onClick={handleClick} className={active === "/gorble/about" ? "active" : ""}/>
+          <Link to="/albinpoutrain/about"  >
+            <img src={about_ico} alt="" data-to="/albinpoutrain/about" onClick={handleClick} className={active === "/gorble/about" ? "active" : ""}/>
           </Link>
           <LinkName>A propos</LinkName>
         </li>

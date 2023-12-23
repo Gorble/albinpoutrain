@@ -54,11 +54,11 @@ const App = () =>{
         </header>
         <main className="main" ref={mainRef}>
           <Routes>
-            <Route path="/gorble/" element={<Accueil/>} />
-            <Route path="/gorble/bourse" element={<Interet_compose/>} />
-            <Route path="/gorble/programme" element={<Programme/>} />
-            <Route path="/gorble/jeu" element={<Jeu main={mainRef} header={headerRef}/>} />
-            <Route path="/gorble/about" element={<About/>} />
+            <Route path="/albinpoutrain/" element={<Accueil/>} />
+            <Route path="/albinpoutrain/bourse" element={<Interet_compose/>} />
+            <Route path="/albinpoutrain/programme" element={<Programme/>} />
+            <Route path="/albinpoutrain/jeu" element={<Jeu main={mainRef} header={headerRef}/>} />
+            <Route path="/albinpoutrain/about" element={<About/>} />
             <Route path="*" element={<NotFound/>} />
           </Routes>
         </main>
