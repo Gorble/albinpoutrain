@@ -30,6 +30,7 @@ const App = () =>{
 
     if(window.innerWidth < 600){
       mainRef.current.style.marginLeft = 0 + "px"
+      mainRef.current.style.marginRight = 0 + "px"
       mainRef.current.style.marginBottom = (headerRef.current.clientHeight) + "px"
     }
     
