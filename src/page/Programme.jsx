@@ -1,5 +1,3 @@
-import { Resultat } from "../component/programme/Resultat"
-import { InfoGenerale } from "../component/programme/InfoGenerale"
 import { Suspense, lazy, useState } from "react"
 import "../style/programme/programme.css"
 

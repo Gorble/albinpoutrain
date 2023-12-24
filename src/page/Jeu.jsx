@@ -109,16 +109,7 @@ export function Jeu({main, header}){
     const [bossCall, setBossCall] = useState(false)
     const [restart, setRestart] = useState(0)
     const [count, setCount] = useState(0)
-    /*const [monsterWidth, setMonsterWidth] = useState(10)
-    const [monsterHeight, setMonsterHeight] = useState(10)
 
-    const monsterSize = {
-        width: monsterWidth,
-        setWidth: setMonsterWidth,
-
-        height: monsterHeight,
-        setWidth: setMonsterHeight,
-    }*/
 
     const monsterRef = useRef()
     const darknessRef = useRef()
@@ -156,6 +147,8 @@ export function Jeu({main, header}){
         if(window.innerWidth > 600){
             main.current.style.width = window.innerWidth - header.current.clientWidth + "px"
             main.current.style.height = window.innerHeight + "px"
+            main.current.style.marginLeft = (header.current.clientWidth) + "px"
+            main.current.style.marginRight = 0 + "px"
             document.querySelector(".root").style.height = window.innerHeight + "px"
         }
         if(window.innerWidth <= 600){
