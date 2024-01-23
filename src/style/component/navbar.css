@@ -14,14 +14,9 @@
 }
 
 
-.navbar img{
-    width: 40px;
-
-}
-
 .navbar svg{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .active{
@@ -48,8 +43,8 @@
     }
 
     .navbar svg{
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
     }   
     
 }
