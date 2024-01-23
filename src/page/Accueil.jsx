@@ -23,7 +23,7 @@ function Accueil(){
         <li>
           Ces problèmes se résolvent d'abord par la réflexion et, au cas échéant, par l'aide d'informations trouvées
           sur internet donc soit grâce aux documentations, soit sur des forums dans le cas où quelqu'un a déjà été confronté
-          à ce problème, soit grâce à des vidéos, soit grâce à tchat GPT.
+          à ce problème, soit grâce à des vidéos, soit grâce à TchatGPT.
           Dans tous les cas, la solution doit être comprise avant de l'utiliser.
         </li>
       </ul>

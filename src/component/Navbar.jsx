@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import accueil_ico from "../imgs/accueil.png"
-import bourse_ico from "../imgs/bourse.png"
-import programme_ico from "../imgs/programme.png"
-import jeu_ico from "../imgs/jeu.png"
+//import accueil_ico from "../imgs/accueil.png"
+import AccueilSVG from "../imgs/AccueilSVG.jsx"
+import BourseSVG from "../imgs/BourseSVG.jsx"
+import ExerciceSVG from "../imgs/ExerciceSVG.jsx"
+import JeuSVG from "../imgs/JeuSVG.jsx"
 import "../style/component/navbar.css"
 import { useCallback,  useState } from 'react';
 import { LinkName } from './LinkName';
@@ -11,11 +12,15 @@ function Navbar({onSetRoute}) {
 
   
   const [active, setActive] = useState(window.location.pathname)
+
+
   
 
   const handleClick = useCallback((e) =>{
-    setActive(e.target.dataset.to)
-    onSetRoute(e.target.dataset.to)
+    
+    setActive(e.currentTarget.dataset.to)
+    onSetRoute(e.currentTarget.dataset.to)
+    
   }, [])
 
   const mouseFlyOver = (e) =>{
@@ -40,35 +45,35 @@ function Navbar({onSetRoute}) {
     
     
   }
-
+//<img src={accueil_ico} alt="logo de l'accueil" data-to="/albinpoutrain/" ref={testRef} onClick={handleClick} className={active === "/albinpoutrain/" ? "active" : ""}/>
 
   return (
     <nav  className='navbar' >
       <ul>
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/albinpoutrain/"  >
-            <img src={accueil_ico} alt="logo de l'accueil" data-to="/albinpoutrain/" onClick={handleClick} className={active === "/albinpoutrain/" ? "active" : ""}/>
+          <Link to="/albinpoutrain/" onClick={handleClick} data-to="/albinpoutrain/">
+            <AccueilSVG whoActive={active}/>
           </Link>
           <LinkName>Accueil</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/albinpoutrain/bourse" >
-            <img src={bourse_ico} alt="" data-to="/albinpoutrain/bourse" onClick={handleClick} className={active === "/albinpoutrain/bourse" ? "active" : ""}/>
+          <Link to="/albinpoutrain/bourse" onClick={handleClick} data-to="/albinpoutrain/bourse" >
+            <BourseSVG whoActive={active}/>
           </Link>
           <LinkName>Calcul boursier</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/albinpoutrain/programme" >
-            <img src={programme_ico} alt="" data-to="/albinpoutrain/programme" onClick={handleClick} className={active === "/albinpoutrain/programme" ? "active" : ""}/>
+          <Link to="/albinpoutrain/programme" onClick={handleClick} data-to="/albinpoutrain/programme" >
+           <ExerciceSVG whoActive={active}/>
           </Link>
           <LinkName>Générateur de programme sportif</LinkName>
         </li>
 
         <li onMouseOver={mouseFlyOver} onMouseLeave={mouseFlyOut}>
-          <Link to="/albinpoutrain/jeu" >
-            <img src={jeu_ico} alt="" data-to="/albinpoutrain/jeu" onClick={handleClick} className={active === "/albinpoutrain/jeu" ? "active" : ""}/>
+          <Link to="/albinpoutrain/jeu" onClick={handleClick} data-to="/albinpoutrain/jeu">
+            <JeuSVG whoActive={active}/>
           </Link>
           <LinkName>Jeu</LinkName>
         </li>
