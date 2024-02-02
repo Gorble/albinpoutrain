@@ -3,6 +3,7 @@ export default function AccueilSVG({whoActive}){
     const bgActive = whoActive === "/albinpoutrain/programme" ? "#00BD0B" : "#FFF"
     const drawActive = whoActive === "/albinpoutrain/programme" ? "#FFF" : "#000000"
     const stroke = whoActive === "/albinpoutrain/programme" ? "white" : "black"
+    const strokeWidth = whoActive === "/albinpoutrain/programme" ? 4 : 0
 
     return <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
     width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
@@ -12,12 +13,12 @@ export default function AccueilSVG({whoActive}){
         <path fill={bgActive} d="M270 630 c-67 -11 -114 -34 -164 -80 -164 -151 -119 -423 85 -515 55
         -24 70 -27 143 -23 66 3 91 10 135 33 159 87 212 304 109 453 -68 98 -190 151
         -308 132z"/>
-        <path fill={drawActive} stroke={stroke} strokeWidth="0" d="M228 627 c-86 -25 -167 -97 -205 -184 -26 -58 -23 -194 4 -255 27
+        <path fill={drawActive} stroke={stroke} strokeWidth={strokeWidth} d="M228 627 c-86 -25 -167 -97 -205 -184 -26 -58 -23 -194 4 -255 27
         -60 95 -127 158 -158 72 -35 198 -35 270 0 64 31 131 98 158 158 31 70 30 199
         -3 267 -30 63 -98 131 -156 156 -57 26 -165 33 -226 16z m214 -35 c59 -26 124
         -91 151 -151 30 -64 30 -178 0 -242 -27 -60 -92 -125 -152 -152 -64 -30 -178
         -30 -242 0 -129 59 -202 206 -169 342 43 180 242 278 412 203z"/>
-        <path fill={drawActive} stroke={stroke} strokeWidth="8" d="M100 435 c0 -28 -4 -35 -20 -35 -18 0 -20 -7 -20 -80 0 -73 2 -80 20
+        <path fill={drawActive} stroke={stroke} strokeWidth={strokeWidth} d="M100 435 c0 -28 -4 -35 -20 -35 -18 0 -20 -7 -20 -80 0 -73 2 -80 20
         -80 16 0 20 -7 20 -35 l0 -35 55 0 55 0 0 60 0 60 110 0 110 0 0 -60 0 -60 55
         0 55 0 0 35 c0 28 4 35 20 35 18 0 20 7 20 80 0 73 -2 80 -20 80 -16 0 -20 7
         -20 35 l0 35 -55 0 -55 0 0 -60 0 -60 -110 0 -110 0 0 60 0 60 -55 0 -55 0 0

@@ -11,6 +11,15 @@ function Navbar({onSetRoute, route}) {
 
   const ulRef = useRef()
 
+  const LINK_COLOR_ACTIVE = "#00BD0B"
+  const LINK_COLOR_INACTIVE = "#FFF"
+  const LINK_DRAW_ACTIVE = "#FFF"
+  const LINK_DRAW_INACTIVE = "#000000"
+  const LINK_STROKE_ACTIVE = "white"
+  const LINK_STROKE_INACTIVE = "black"
+  const LINK_STROKEWIDTH_ACTIVE = 8
+  const LINK_STROKEWIDTH_INACTIVE = 0
+
 
   const handleClick = useCallback((e) =>{
     
@@ -22,7 +31,6 @@ function Navbar({onSetRoute, route}) {
     const li = ulRef.current.querySelectorAll("li")
     li.forEach(item => {
       const linkName = item.querySelector(".link_name")
-      console.log(linkName.offsetWidth)
       linkName.style.right = -(1000) + "px"
     })
 
