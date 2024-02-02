@@ -1,5 +1,5 @@
 import { Suspense, lazy, useState } from "react"
-import "../style/programme/programme.css"
+import "../style/programme.css"
 
 function Programme(){
 

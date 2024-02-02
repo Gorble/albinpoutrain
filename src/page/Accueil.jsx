@@ -1,4 +1,4 @@
-
+import "../style/accueil.css"
 
 function Accueil(){
   return <>
@@ -16,7 +16,8 @@ function Accueil(){
       Je suis autodidacte, j'ai donc, en toute autonomie, appris grâce à internet par l'intermédiaire de vidéos,
       de recherches Google afin de trouver une solution à un problème donné, et bien évidemment par la pratique.
       Un cheminement classique d'apprentissage se présente ainsi:
-      <ul>
+    </p>
+    <ul>
         <li>Acquisition des base (d'un langage, library, framework)</li>
         <li>Mise en pratique des compétences apprise en développant de petits projets</li>
         <li>Ces probjets soulèvent bien souvent de nouveaux problème qu'il faut apprendre à résoudre</li>
@@ -27,7 +28,8 @@ function Accueil(){
           Dans tous les cas, la solution doit être comprise avant de l'utiliser.
         </li>
       </ul>
-      <p>
+
+    <p>
           D'abord HTML et CSS puis Javacript pendant une longue periode afin de savoir l'utiliser convenablement. J'ai également touché
           au Back-end avec NodeJS et fastify afin principalement de comprendre le fonctionnement d'une requête avec fetch, donc le
           fonctionnement d'un GET, d'un POST notamment. Tout ceci afin de comprendre un minimum le fonctionnement global d'un site web.
@@ -39,7 +41,6 @@ function Accueil(){
           J'avais également "connecté" la partie Front-end en React avec mon Back-end NodeJS grâce au proxy afin de faire quelque requêtes
           avec fetch.
       </p> 
-    </p>
 
   </div>
   <div className="bloc presentation">

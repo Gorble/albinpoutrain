@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react"
 import {Formulaire} from "../component/interet_compose/Formulaire.jsx"
 import {Resultat} from "../component/interet_compose/Resultat.jsx"
-import "../style/interet_compose/ic_style.css"
+import "../style/ic_style.css"
 
 export function Interet_compose(){
 

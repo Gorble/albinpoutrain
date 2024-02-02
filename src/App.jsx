@@ -25,6 +25,7 @@ const App = () =>{
       mainRef.current.style.marginLeft = (headerRef.current.clientWidth*2) + "px"
       mainRef.current.style.marginRight = (headerRef.current.clientWidth) + "px"
       mainRef.current.style.width = (window.innerWidth - headerRef.current.clientWidth) + "px"
+      mainRef.current.style.height = "unset"
       return
     }
 
@@ -32,6 +33,7 @@ const App = () =>{
       mainRef.current.style.marginLeft = 0 + "px"
       mainRef.current.style.marginRight = 0 + "px"
       mainRef.current.style.marginBottom = (headerRef.current.clientHeight) + "px"
+      mainRef.current.style.height = "unset"
       //mainRef.current.style.width = window.innerWidth + "px"
     }
     
@@ -58,8 +60,8 @@ const App = () =>{
   return (<>
       <Router>
         <header className="header" ref={headerRef}>
-          <Logo />
-          <Navbar onSetRoute={setRoute} />
+          <Logo onSetRoute={setRoute} />
+          <Navbar onSetRoute={setRoute} route={route}/>
         </header>
         <main className="main" ref={mainRef}>
           <Routes>

@@ -1,0 +1,15 @@
+.presentation{
+    line-height: 1.5rem;
+  }
+  
+  .presentation p{
+    padding: 10px;
+  }
+  
+  .presentation ul{
+    margin: 15px 0;
+  }
+  
+  .presentation li{
+    padding: 5px;
+  }

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Player } from "../component/jeu/Player"
-import "../style/jeu/jeu.css"
+import "../style/jeu.css"
 import { Menu } from "../component/jeu/Menu"
 import { Monster } from "../component/jeu/Monster"
 import { Top } from "../component/jeu/Top"
@@ -149,7 +149,6 @@ export function Jeu({main, header}){
             main.current.style.height = window.innerHeight + "px"
             main.current.style.marginLeft = (header.current.clientWidth) + "px"
             main.current.style.marginRight = 0 + "px"
-            document.querySelector(".root").style.height = window.innerHeight + "px"
         }
         if(window.innerWidth <= 600){
             main.current.style.width = window.innerWidth + "px"
