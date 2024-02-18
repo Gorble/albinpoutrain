@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="64.000000pt"
+   height="64.000000pt"
+   viewBox="0 0 64.000000 64.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg3"
+   sodipodi:docname="AccueilSVG.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="pt"
+     inkscape:zoom="9.6210938"
+     inkscape:cx="42.614698"
+     inkscape:cy="42.666667"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3" />
+  <g
+     transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+     fill="#000000"
+     stroke="none"
+     id="g3">
+    <path
+       d="M270 630 c-67 -11 -114 -34 -164 -80 -164 -151 -119 -423 85 -515 55         -24 70 -27 143 -23 66 3 91 10 135 33 159 87 212 304 109 453 -68 98 -190 151         -308 132z"
+       id="path1"
+       fill="none" />
+    <path
+       d="M241 630 c-110 -23 -212 -132 -232 -248 -28 -159 51 -302 201 -363         57 -23 185 -17 245 12 64 30 124 90 154 154 35 72 35 198 0 270 -30 63 -90         124 -151 152 -54 26 -154 36 -217 23z m213 -44 c105 -51 161 -144 161 -266 0         -85 -21 -142 -74 -203 -82 -92 -237 -121 -353 -64 -160 79 -215 278 -118 430         80 126 246 170 384 103z"
+       id="path2"
+       fill="black" />
+    <path
+       d="M198 445 c-62 -53 -114 -100 -116 -105 -6 -18 13 -10 41 15 l27 26 0         -121 0 -120 170 0 170 0 0 122 0 122 28 -27 c29 -28 42 -33 42 -18 0 11 -228         201 -240 201 -5 0 -59 -43 -122 -95z m197 14 l75 -62 0 -118 0 -119 -150 0         -150 0 0 118 1 117 72 62 c40 34 73 62 75 62 1 1 36 -27 77 -60z"
+       id="path3"
+       fill="black" />
+  </g>
+</svg>
