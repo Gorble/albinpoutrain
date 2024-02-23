@@ -64,6 +64,10 @@ function Presentation ({setState}){
     if(whenRef.current != undefined){
       obs.observe(whenRef.current)
     }
+
+    return () =>{
+      obs.disconnect()
+    }
   }, [])
 
   return <>
@@ -155,6 +159,10 @@ function About(){
     }
     if(treeRef.current != undefined){
       obs.observe(treeRef.current)
+    }
+
+    return () =>{
+      obs.disconnect()
     }
 
   }, [])
