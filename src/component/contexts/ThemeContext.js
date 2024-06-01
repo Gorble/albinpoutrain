@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext({
     theme: "light",
@@ -6,10 +6,20 @@ export const ThemeContext = createContext({
 })
 
 export function ThemeContextProvider ({children}){
-    const [theme, setTheme] = useState("light")
+
+    const cookie = document.cookie.split("=")[1] === "dark" ? "dark" : "light"
+
+    const [theme, setTheme] = useState(cookie)
+
     const themeSwitcher = (theme) => {
         setTheme(() => theme)
     }
+
+    useEffect(() => {
+        document.cookie = `theme=${theme}`
+    }, [theme])
+
+
 
     const ThemeValue = {theme, themeSwitcher}
 

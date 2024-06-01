@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 0.2s;
+  transition: all 0.1s;
   --bgColorLight: rgb(240, 243, 248);
   --bgColorDark: rgb(0, 29, 80);
   --blocLight: rgb(255, 255, 255);
@@ -108,12 +108,33 @@ input[type="text"]{
 
 
 
-.theme_range{
-  width: 2rem;
+.theme{
+  width: 80%;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.8);
   align-self: center;
-  padding: 0;
-  border: 0;
+  border-radius: 20px;
+  margin-bottom: 0.25rem;
 }
+.theme input{
+  display: none;
+}
+.theme label{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+.theme img{
+  position: absolute;
+  padding: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+
 
 @media screen and (max-width: 600px){
 
@@ -130,10 +151,11 @@ input[type="text"]{
     right: 0;
     left: 0;
   }
-  .theme_range{
+  .theme{
     position:absolute;
-    bottom: 0.5rem;
+    bottom: 0.3rem;
     right: 1rem;
+    width: 10%;
   }
   
 }
