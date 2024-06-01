@@ -1,6 +1,7 @@
 import { Field } from "./Field";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useContext, useRef, useState } from "react";
 import { GetValueContext } from "./context";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 
 export function Formulaire({getStateValues}){
@@ -17,6 +18,10 @@ export function Formulaire({getStateValues}){
     const regulierRef = useRef()
     const interetRef = useRef()
     const dureeRef = useRef()
+
+    const {theme} = useContext(ThemeContext)
+
+    const style = theme === "light" ? {backgroundColor: "white"} : {backgroundColor: "rgba(255, 255, 255, 0.7)"}
 
 
     const getValue = useCallback((e) =>{
@@ -81,7 +86,7 @@ export function Formulaire({getStateValues}){
         getValue
     }
 
-    return <div className="bloc bourse">
+    return <div className={`bloc bourse bloc_${theme}`}>
         <h1>Calcul boursier simple, intérêt composé</h1>
         <div className="formulaire_bourse">
             <GetValueContext.Provider value={getValueContext}>
@@ -91,7 +96,7 @@ export function Formulaire({getStateValues}){
                 <Field id="duree" reference={dureeRef} signe={"an(s)"}>Durée d'investissement</Field>
             </GetValueContext.Provider>
         </div>
-        <button onClick={controlValue} className="calcul_button">Calculer</button>
+        <button onClick={controlValue} className="calcul_button" style={style}>Calculer</button>
         
     </div>
 }

@@ -3,7 +3,11 @@
   box-sizing: border-box;
   margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --bgcolor: rgb(240, 243, 248);
+  transition: all 0.2s;
+  --bgColorLight: rgb(240, 243, 248);
+  --bgColorDark: rgb(0, 29, 80);
+  --blocLight: rgb(255, 255, 255);
+  --blocDark: rgb(0, 26, 70);
 }
 
 
@@ -16,12 +20,26 @@ p, label, button{
 }
 
 body{
-  background-color: var(--bgcolor);
+  /*background-color: var(--bgcolor);*/
 }
 
 .root{
   display: flex;
 }
+
+/*.container{
+  height: 100%;
+  display: flex;
+}*/
+.body_light{
+  background-color: var(--bgColorLight);
+  color: black;
+}
+.body_dark{
+  background-color: var(--bgColorDark);
+  color: rgba(255, 255, 255, 0.6);
+}
+
 
 .main{
   width: 100%;
@@ -33,20 +51,25 @@ body{
   position:fixed;
   top: 0;
   bottom: 0;
-  background-color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
+.bloc_light{
+  background-color: var(--blocLight);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.bloc_dark{
+  background-color: var(--blocDark);
+  box-shadow: 0px 0px 5px 0px rgb(0, 47, 128);
+}
+
 .bloc{
-  background-color: white;
   border-radius: 10px;
   padding: 1rem;
   margin: 1.5rem 1rem;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .field{
@@ -59,7 +82,7 @@ input[type="text"]{
   width: 100%;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 7px;
   padding-left: 10px;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -83,6 +106,15 @@ input[type="text"]{
   border: 2px solid red !important;
 }
 
+
+
+.theme_range{
+  width: 2rem;
+  align-self: center;
+  padding: 0;
+  border: 0;
+}
+
 @media screen and (max-width: 600px){
 
   h1{
@@ -97,6 +129,11 @@ input[type="text"]{
     top: auto;
     right: 0;
     left: 0;
+  }
+  .theme_range{
+    position:absolute;
+    bottom: 0.5rem;
+    right: 1rem;
   }
   
 }

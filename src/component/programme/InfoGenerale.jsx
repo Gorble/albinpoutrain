@@ -1,4 +1,4 @@
-import { useRef, useState} from "react"
+import { useContext, useRef, useState} from "react"
 import { Field } from "./component/form/Field"
 import { Range } from "./component/form/Range"
 import { Radio } from "./component/form/Radio"
@@ -6,6 +6,7 @@ import { Morphologie } from "./component/Morphologie"
 import { Help } from "./component/form/Help"
 
 import { exerciceAssignation } from "./function/exerciceAssignation"
+import { ThemeContext } from "../contexts/ThemeContext"
 
 
 const controlField = function(ref, canSend){
@@ -34,6 +35,9 @@ export default function InfoGenerale ({setInfo, setPage}){
     const ageRef = useRef()
     const tailleRef = useRef()
     const poidsRef = useRef()
+
+    const {theme} = useContext(ThemeContext)
+
 
     const submit = (e) =>{
         e.preventDefault()
@@ -73,7 +77,7 @@ export default function InfoGenerale ({setInfo, setPage}){
     return <>
         <form className="info_generale" onSubmit={submit}>
 
-            <div className="bloc program_field">
+            <div className={`bloc program_field bloc_${theme}`}>
                 <h3>Quelques infos perso...</h3>
                 <Field id={"age"} reference={ageRef} signe={"an.s"}>{"Age"}</Field>
                 <Field id={"taille"} reference={tailleRef} signe={"cm"}>{"Taille"}</Field>
@@ -106,7 +110,7 @@ export default function InfoGenerale ({setInfo, setPage}){
             </div>
 
             
-            <div className="bloc program_activity">
+            <div className={`bloc program_activity bloc_${theme}`}>
                 <h3>Dans la vie en général je...</h3>
                 <ul className="radio_organizer">
                     <li>
@@ -128,11 +132,11 @@ export default function InfoGenerale ({setInfo, setPage}){
                 
             </div>
                 
-            <div className="bloc program_training">
+            <div className={`bloc program_training bloc_${theme}`}>
                 <Range id={"nbTraining"} ><h3>Nombre d'entraînement désiré</h3></Range>
             </div>
 
-            <div className="bloc program_morpho">
+            <div className={`bloc program_morpho bloc_${theme}`}>
                 <h3>Analyse morphologique rapide</h3>
                 
                 <p>

@@ -7,6 +7,7 @@ import "../style/component/navbar.css"
 import { useCallback, useEffect, useRef } from 'react';
 import { LinkName } from './LinkName';
 
+
 function Navbar({onSetRoute, route}) {
 
   const ulRef = useRef()
@@ -19,6 +20,7 @@ function Navbar({onSetRoute, route}) {
   const LINK_STROKE_INACTIVE = "black"
   const LINK_STROKEWIDTH_ACTIVE = 8
   const LINK_STROKEWIDTH_INACTIVE = 0
+
 
 
   const handleClick = useCallback((e) =>{

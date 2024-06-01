@@ -1,7 +1,12 @@
+import { useContext } from "react"
+import { ThemeContext } from "../component/contexts/ThemeContext"
+
 export default function AccueilSVG({whoActive}){
 
-    const bgActive = whoActive === "/albinpoutrain/jeu" ? "#00BD0B" : "#FFF"
-    const drawActive = whoActive === "/albinpoutrain/jeu" ? "#FFF" : "#000000"
+    const {theme} = useContext(ThemeContext)
+
+    const bgActive = theme === "light" ? (whoActive === "/albinpoutrain/jeu" ? "#00BD0B" : "none") : (whoActive === "/albinpoutrain/jeu" ? "rgb(0, 43, 117)" : "none")
+    const drawActive = theme === "light" ? (whoActive === "/albinpoutrain/jeu" ? "#FFF" : "#000000") : (whoActive === "/albinpoutrain/jeu" ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.4)")
     const stroke = whoActive === "/albinpoutrain/jeu" ? "white" : "black"
     const strokeWidth = whoActive === "/albinpoutrain/jeu" ? 4 : 0
 

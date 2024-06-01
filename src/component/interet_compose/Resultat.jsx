@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Lines } from "./Lines";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const calcul = (values)=>{
     console.log("enter")
@@ -27,11 +29,13 @@ const calcul = (values)=>{
 
 export function Resultat({values}){
 
+    const {theme} = useContext(ThemeContext)
+
     const [tab, last, pocket] = Object.keys(values).length === 0 ? [0,0,0] 
                                 : calcul(values)
     
 
-    return <div className="bloc">
+    return <div className={`bloc bloc_${theme}`}>
 
         {
 

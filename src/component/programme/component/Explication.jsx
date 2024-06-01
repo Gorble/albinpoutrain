@@ -1,12 +1,16 @@
 import { Paragraphe } from "./Paragraphe"
 import program from "../bdd/program.json"
+import { ThemeContext } from "../../contexts/ThemeContext"
+import { useContext } from "react"
 
 export function Explication({info}){
 
     const text = info.conseils
 
+    const {theme} = useContext(ThemeContext)
 
-    return <div className="explication bloc">
+
+    return <div className={`explication bloc bloc_${theme}`}>
         <h2>Conseils & explications</h2>
         <Paragraphe text={program[info.generale.training-1].program}>Votre programme</Paragraphe>
         <Paragraphe text={text.cage}>La cage thoracique</Paragraphe>

@@ -16,7 +16,7 @@
 .presentation{
   line-height: 1.5rem;
   opacity: 0;
-  transition: all 1s;
+  transition: opacity 1s;
 }
   
 .presentation p{
@@ -38,36 +38,3 @@
   color: #00BD0B;
 }
 
-.carrousel{
-  position: relative;
-  overflow: hidden;
-}
-
-.carrousel_imgs{
-  display: flex;
-  justify-content: center;
-  transition: all 0.3s;
-}
-
-.carrousel img{
-  
-  width: 100%;
-}
-
-.carrousel button{
-  border: 0;
-  background-color: transparent;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-}
-
-.carrousel_button_left{
-  left: 0;
-}
-
-.carrousel_button_right{
-  right: 0;
-}

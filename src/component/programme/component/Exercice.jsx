@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { exerciceAssignation } from "../function/exerciceAssignation"
 import { Un } from "./days/Un"
 import { Deux } from "./days/Deux"
@@ -6,11 +6,14 @@ import { Trois } from "./days/Trois"
 import { Quatre } from "./days/Quatre"
 import { Cinq } from "./days/Cinq"
 import { Six } from "./days/Six"
+import { ThemeContext } from "../../contexts/ThemeContext"
 
 
 
 
 export function Exercice({info, size}){
+
+    const {theme} = useContext(ThemeContext)
 
     exerciceAssignation(info)
 
@@ -40,7 +43,7 @@ export function Exercice({info, size}){
     }
 
 
-    return <div className="exercice bloc"   style={{height: size + "px"}}>
+    return <div className={`exercice bloc bloc_${theme}`}   style={{height: size + "px"}}>
         
         <h2>Exercices</h2>
         <div className="days">

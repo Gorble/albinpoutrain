@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Accueil from "./page/Accueil";
 import Programme from "./page/Programme";
 import NotFound from "./page/NotFound";
-import { useEffect, useRef, useState} from "react";
+import { useContext, useEffect, useRef, useState} from "react";
 import { Interet_compose } from "./page/Interet_compose";
 import { Jeu } from "./page/Jeu";
+import { ThemeContext} from "./component/contexts/ThemeContext";
+import { ThemeSwitcher } from "./component/ThemeSwitcher";
 
 
 
@@ -16,6 +18,12 @@ const App = () =>{
   const mainRef = useRef()
 
   const [route, setRoute] = useState(window.location.pathname)
+
+  const {theme} = useContext(ThemeContext)
+
+  theme === "light" ? document.body.className = "body_light" : document.body.className = "body_dark" 
+
+
 
   const mainPosition = function(){
 
@@ -56,22 +64,25 @@ const App = () =>{
   }, [])
 
 
+
+  const a = "r"
   
   return (<>
       <Router>
-        <header className="header" ref={headerRef}>
-          <Logo onSetRoute={setRoute} />
-          <Navbar onSetRoute={setRoute} route={route}/>
-        </header>
-        <main className="main" ref={mainRef}>
-          <Routes>
-            <Route path="/albinpoutrain/" element={<Accueil/>} />
-            <Route path="/albinpoutrain/bourse" element={<Interet_compose/>} />
-            <Route path="/albinpoutrain/programme" element={<Programme/>} />
-            <Route path="/albinpoutrain/jeu" element={<Jeu main={mainRef} header={headerRef} />} />
-            <Route path="*" element={<NotFound/>} />
-          </Routes>
-        </main>
+          <header className={`header bloc_${theme}`} ref={headerRef}>
+            <Logo onSetRoute={setRoute} />
+            <Navbar onSetRoute={setRoute} route={route}/>
+            <ThemeSwitcher></ThemeSwitcher>
+          </header>
+          <main className="main" ref={mainRef}>
+            <Routes>
+              <Route path="/albinpoutrain/" element={<Accueil/>} />
+              <Route path="/albinpoutrain/bourse" element={<Interet_compose/>} />
+              <Route path="/albinpoutrain/programme" element={<Programme/>} />
+              <Route path="/albinpoutrain/jeu" element={<Jeu main={mainRef} header={headerRef} />} />
+              <Route path="*" element={<NotFound/>} />
+            </Routes>
+          </main>
       </Router>
     </>
 

@@ -1,9 +1,12 @@
 import { calcul_macros } from "../function/calcul_macros"
 import conseil_diete  from "../bdd/conseil_diet.json"
-import { useEffect, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
+import { ThemeContext } from "../../contexts/ThemeContext"
 
 
 export function Nutrition({info, setGridSize}){
+
+    const {theme} = useContext(ThemeContext)
 
     const calories = calcul_macros(info)
     const prot = parseInt(info.poids*1.8)
@@ -98,7 +101,7 @@ export function Nutrition({info, setGridSize}){
 
 
 
-    return <div className="nutrition bloc" ref={div}>
+    return <div className={`nutrition bloc bloc_${theme}`} ref={div}>
         <h2 ref={title}>Nutrition</h2>
 
         <table className="table-diet" ref={table}>

@@ -1,5 +1,8 @@
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import "../style/accueil.css"
+import { ThemeContext } from "../component/contexts/ThemeContext"
+
+
 
 function Accueil(){
 
@@ -13,25 +16,45 @@ function Accueil(){
 
 function Navigation({state, setState, navRef}){
 
+  const {theme} = useContext(ThemeContext)
+
   const ACTIVE = {
-    backgroundColor: "#00AF0A",
-    color: "white"
+    light: {
+      backgroundColor: "#00AF0A",
+      color: "white"
+    },
+    dark: {
+      backgroundColor: "rgb(0, 43, 117)",
+      color: "white"
+    }
   }
 
   const INACTIVE = {
-    backgroundColor: "white",
-    color: "black"
+    light: {
+      backgroundColor: "white",
+      color: "black"
+    },
+    dark: {
+      backgroundColor: "rgb(0, 26, 70)",
+      color: "white"
+    }
+    
   }
+
+  const active = theme === "light" ? ACTIVE.light : ACTIVE.dark
+  const inactive = theme === "light" ? INACTIVE.light : INACTIVE.dark
+
+
 
   return <div className="accueil_navigation" ref={navRef}>
 
     <button id={0} 
-            style={state === 0 ? ACTIVE : INACTIVE}
+            style={state === 0 ? active : inactive}
             onClick={() => setState(()=>0)}
     >Présentation</button>
 
     <button id={1}
-            style={state === 1 ? ACTIVE : INACTIVE}
+            style={state === 1 ? active : inactive}
             onClick={() => setState(()=>1)}
     >A propos du site</button>
 
@@ -44,6 +67,8 @@ function Presentation ({setState}){
   const howRef = useRef()
   const whenRef = useRef()
 
+  const {theme} = useContext(ThemeContext)
+
   const observerWizzard = (e) => {
     e.forEach(elem => {
       if(elem.isIntersecting){
@@ -54,7 +79,7 @@ function Presentation ({setState}){
 
   useEffect(()=>{
     const obs = new IntersectionObserver(observerWizzard)
-    console.log(obs)
+
     if(whoRef.current != undefined){
       obs.observe(whoRef.current)
     }
@@ -71,15 +96,14 @@ function Presentation ({setState}){
   }, [])
 
   return <>
-  <div className="bloc presentation" style={{marginTop: 3.5 + "rem"}} ref={whoRef}>
+  <div className={`bloc presentation bloc_${theme}`} style={{marginTop: 3.5 + "rem"}} ref={whoRef}>
     <h2>Qui suis-je ?</h2>
     <p>
-      Je m'appelle Albin Poutrain, je suis développeur web Front-end. <a href='#' onClick={()=> setState(()=>1)}>Ce site portfolio </a>  
-      est développé avec ReactJS.
+    Je m'appelle Albin Poutrain, je suis développeur web Front-end. <a href='#' onClick={()=> setState(()=>1)}>Ce site portfolio</a> est développé avec ReactJS.
     </p>
 
   </div>
-  <div className="bloc presentation" ref={howRef}>
+  <div className={`bloc presentation bloc_${theme}`} ref={howRef}>
     <h2>Comment ai-je appris ?</h2>
     <p>
       Je suis autodidacte, j'ai donc, en toute autonomie, appris grâce à internet par l'intermédiaire de vidéos,
@@ -112,7 +136,7 @@ function Presentation ({setState}){
       </p> 
 
   </div>
-  <div className="bloc presentation" ref={whenRef}>
+  <div className={`bloc presentation bloc_${theme}`} ref={whenRef}>
     <h2>Comment tout cela a commencé ?</h2>
     <p>
       J'ai écris ma première ligne de code à l'age de 11 ans. A l'époque je voulais développéer des jeux vidéos, type RPG
@@ -140,6 +164,8 @@ function About(){
   const oneRef = useRef()
   const twoRef = useRef()
   const treeRef = useRef()
+
+  const {theme} = useContext(ThemeContext)
 
   const observerWizzard = (e) => {
     e.forEach(elem => {
@@ -169,7 +195,7 @@ function About(){
 
   
   return <>
-  <div className="bloc presentation" style={{marginTop: 3.5 + "rem"}} ref={oneRef}>
+  <div className={`bloc presentation bloc_${theme}`} style={{marginTop: 3.5 + "rem"}} ref={oneRef}>
     <h2>A quoi sert ce site</h2>
     <p>
       Il s'agit d'un site portfolio. Ce site a donc pour objectif de montrer des
@@ -179,7 +205,7 @@ function About(){
     </p>
   </div>
 
-  <div className="bloc presentation" ref={twoRef}>
+  <div className={`bloc presentation bloc_${theme}`} ref={twoRef}>
     <div >
         
       <h2>Le calcul boursier</h2>
@@ -220,7 +246,7 @@ function About(){
       
   </div>
     
-  <div className="bloc presentation" ref={treeRef}>
+  <div className={`bloc presentation bloc_${theme}`} ref={treeRef}>
     <h2>Le style général du site</h2>
     <p>
       Je me suis inspiré de la plateforme d'investissement en crypto Uphold 
