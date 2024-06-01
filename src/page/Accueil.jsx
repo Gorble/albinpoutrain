@@ -113,7 +113,7 @@ function Presentation ({setState}){
     <ul>
         <li>Acquisition des base (d'un langage, library, framework)</li>
         <li>Mise en pratique des compétences apprise en développant de petits projets</li>
-        <li>Ces probjets soulèvent bien souvent de nouveaux problème qu'il faut apprendre à résoudre</li>
+        <li>Ces projets soulèvent bien souvent de nouveaux problèmes qu'il faut apprendre à résoudre</li>
         <li>
           Ces problèmes se résolvent d'abord par la réflexion et, au cas échéant, par l'aide d'informations trouvées
           sur internet donc soit grâce aux documentations, soit sur des forums dans le cas où quelqu'un a déjà été confronté
@@ -142,7 +142,7 @@ function Presentation ({setState}){
       J'ai écris ma première ligne de code à l'age de 11 ans. A l'époque je voulais développéer des jeux vidéos, type RPG
       alors je me suis mis a apprendre le C++. Cela ma permi de comprendre assez tôt le fonctionnement d'un algorithme, et bien
       entendu de me familiariser au code ( c'était quand même déjà du C++ ). <br></br>
-      J'ai finalement arrêté puisque je savais que je ne pourrai pas atteindre mon objectif seul. Développer un RPG en 3D seul 
+      J'ai finalement arrêté puisque je savais que je ne pourrai pas atteindre mon objectif seul. Développer un RPG en 3D 
       m'aurait demandé d'avoir des compétences bien trop variées, que ce soit en code ou en modélisation 3D (pour ne citer que ça),
       en plus de requérir énormément de temps.<br></br><br></br>
       C'est finalement à la fin du lycée pour un projet technique que j'ai de nouveau re touché au code. Pour le coté développement
@@ -250,7 +250,7 @@ function About(){
     <h2>Le style général du site</h2>
     <p>
       Je me suis inspiré de la plateforme d'investissement en crypto Uphold 
-      (attention, pas le site).
+      (attention, pas le site) ainsi que du site web de <a href="https://www.grafikart.fr" target="_blank">Grafikart</a>
     </p>  
   </div>
 
